@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or dataset, please cite it as below."
+authors:
+- family-names: "Gnanamani"
+  given-names: "Christon Fredrick David"
+  affiliation: "University of Southern Denmark (SDU)"
+- family-names: "Senouci"
+  given-names: "Benaoumeur"
+  affiliation: "University of Southern Denmark (SDU)"
+title: "Toward Unified HDL Verification: A Multi-Language Synthetic Dataset and LoRA Fine-Tuning Framework for LLM-Based Testbench Generation"
+version: 1.0.0
+date-released: 2026-03-16
+url: "https://github.com/christon-fredrick/SyntheticBench"
