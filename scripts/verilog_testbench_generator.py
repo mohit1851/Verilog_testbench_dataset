@@ -17,7 +17,7 @@ else:
     print("WARNING: HF_TOKEN not found. Set it with: export HF_TOKEN=your_token")
 
 # Configuration
-TEST_DATASET = "test_designs.csv"
+TEST_DATASET = "verilog_designs.csv"
 OUTPUT_DIR = "./benchmark_results"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 

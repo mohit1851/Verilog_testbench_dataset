@@ -12,11 +12,10 @@ FINAL_REPORT_FILE = "final_summary.md"
 
 def find_iverilog():
     """Auto-detect iverilog path (Cross-platform)."""
-    # 1. Windows/Manual Fallbacks (Prioritize X: drive if it exists to avoid space-in-path issues)
+    # 1. Common Windows Install Paths
     for path in [
-        r"X:\bin\iverilog.exe", 
-        r"D:\Masters SDU\thesis\iverilog\bin\iverilog.exe", 
-        r"C:\iverilog\bin\iverilog.exe"
+        r"C:\iverilog\bin\iverilog.exe",
+        r"C:\iverilog\iverilog.exe"
     ]:
         if os.path.exists(path):
             return path

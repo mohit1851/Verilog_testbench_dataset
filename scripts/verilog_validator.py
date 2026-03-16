@@ -5,7 +5,16 @@ import tempfile
 import concurrent.futures
 from tqdm import tqdm
 
-VERILOG_CMD = r"C:\iverilog\bin\iverilog.exe"
+import shutil
+
+def find_iverilog():
+    """Auto-detect iverilog path."""
+    for path in [r"C:\iverilog\bin\iverilog.exe", r"C:\iverilog\iverilog.exe"]:
+        if os.path.exists(path): return path
+    return shutil.which("iverilog") or "iverilog"
+
+VERILOG_CMD = find_iverilog()
+DATASET_CSV = "verilog_designs.csv"
 
 def check_syntax(code_str, idx):
     if not isinstance(code_str, str) or not code_str.strip():
@@ -41,8 +50,8 @@ def get_complexity_category(lines):
         return 'High'
 
 def main():
-    print("Loading CSV...")
-    df = pd.read_csv("christon_internet_set_cleaned.csv")
+    print(f"Loading {DATASET_CSV}...")
+    df = pd.read_csv(DATASET_CSV)
     
     # We want 1000 of each if possible, total 3000
     TARGET_PER_CATEGORY = 1000
