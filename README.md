@@ -1,4 +1,4 @@
-# Verilog Testbench Dataset (VerilogBench)
+# Verilog Testbench Dataset
 
 ## Overview
 This repository contains a **High-Integrity Verilog Dataset** of design and testbench pairs, derived from curated hardware repositories and extended with **synthetic testbenches** generated using **Gemini-2.0-Pro** and **instruction-tuned LLMs**. All testbenches are validated for synthesizability and functional correctness using **Icarus Verilog**.
@@ -31,25 +31,13 @@ Fine-tuning established a significant performance "Jump" in testbench generation
 
 ---
 
-## Academic Reference
-This repository supports the Master's thesis research at the **University of Southern Denmark (SDU)**:
-> **"Toward Unified HDL Verification: A Multi-Language Synthetic Dataset and LoRA Fine-Tuning Framework for LLM-Based Testbench Generation"** (2026).
-
----
-
 ## Usage
 1. **Preparation**: Install dependencies via `pip install -r requirements.txt`.
 2. **Validation**: Run `python scripts/verilog_validator.py` to curate the dataset.
 3. **Inference**: Generate testbenches using `python scripts/verilog_testbench_generator.py`.
 4. **Evaluation**: Verify against `iverilog` using `python scripts/verilog_simulator_evaluator.py`.
 
----
-**Citation**
-```bibtex
-@software{Gnanamani_SyntheticBench_2026,
-author = {Gnanamani, Christon Fredrick David and Senouci, Benaoumeur},
-month = {3},
-title = {{Toward Unified HDL Verification: A Multi-Language Synthetic Dataset and LoRA Fine-Tuning Framework for LLM-Based Testbench Generation}},
+
 url = {https://github.com/mohit1851/Verilog_testbench_dataset},
 version = {1.0.0},
 year = {2026}
