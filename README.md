@@ -37,9 +37,3 @@ Fine-tuning established a significant performance "Jump" in testbench generation
 3. **Inference**: Generate testbenches using `python scripts/verilog_testbench_generator.py`.
 4. **Evaluation**: Verify against `iverilog` using `python scripts/verilog_simulator_evaluator.py`.
 
-
-url = {https://github.com/mohit1851/Verilog_testbench_dataset},
-version = {1.0.0},
-year = {2026}
-}
-```
